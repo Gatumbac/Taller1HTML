@@ -1,0 +1,191 @@
+TUMBACO SANTANA GABRIEL ALEJANDRO
+
+Crea una página web completa desde cero sobre una cafetería artesanal, usando solo HTML, CSS (en archivo externo) y JavaScript (en archivo externo).
+Explica la estructura del proyecto y qué hace cada archivo.
+Agrega una interacción simple con JavaScript (por ejemplo, un botón que cambie el color de fondo del sitio).
+Selecciona una paleta de colores y fuente que combinen con el tema de una cafetería.
+Muestra el código de los archivos index.html, style.css y script.js, y explica cómo abrir el proyecto en un navegador
+ChatGPT dijo:
+
+¡Claro! Vamos a crear una página web completa para una cafetería artesanal utilizando:
+
+HTML para la estructura.
+
+CSS externo para los estilos.
+
+JavaScript externo para una interacción sencilla (cambiar el color de fondo con un botón).
+
+🧱 Estructura del Proyecto
+cafeteria-artesanal/
+│
+├── index.html       ← Archivo principal HTML
+├── style.css        ← Archivo de estilos CSS externo
+└── script.js        ← Archivo JavaScript externo
+
+🎨 Paleta de colores y fuente
+
+Paleta de colores inspirada en cafeterías:
+
+Fondo: #f4f1ee (beige claro)
+
+Texto principal: #3e2f28 (marrón café)
+
+Botones: #a97458 (café claro)
+
+Hover botón: #8c5e44
+
+Fuente sugerida: 'Playfair Display' para títulos y 'Open Sans' para texto, ambas de Google Fonts.
+
+📁 1. index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Artesanal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Café Artesanal</h1>
+    <p>Pasión por el buen café</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Bienvenidos</h2>
+      <p>Descubre el sabor auténtico del café hecho con dedicación y amor. En nuestra cafetería artesanal, cada taza es una obra de arte.</p>
+    </section>
+
+    <section class="menu">
+      <h2>Nuestro Menú</h2>
+      <ul>
+        <li>Espresso</li>
+        <li>Cappuccino</li>
+        <li>Latte</li>
+        <li>Café filtrado</li>
+        <li>Pastelería artesanal</li>
+      </ul>
+    </section>
+
+    <button id="toggle-bg">Cambiar fondo</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Café Artesanal. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+🎨 2. style.css
+/* Fuente base */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background-color: #f4f1ee;
+  color: #3e2f28;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  background-color: #a97458;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+}
+
+/* Contenido principal */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.intro, .menu {
+  margin-bottom: 2rem;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 0.5rem 0;
+}
+
+/* Botón */
+button#toggle-bg {
+  background-color: #a97458;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button#toggle-bg:hover {
+  background-color: #8c5e44;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  background-color: #3e2f28;
+  color: white;
+  padding: 1rem;
+}
+
+⚙️ 3. script.js
+const button = document.getElementById('toggle-bg');
+let toggled = false;
+
+button.addEventListener('click', () => {
+  document.body.style.backgroundColor = toggled ? '#f4f1ee' : '#e2d6ce';
+  toggled = !toggled;
+});
+
+
+¿Qué hace este código?
+
+Selecciona el botón con id="toggle-bg".
+
+Alterna el color de fondo de la página entre dos tonos cuando el usuario hace clic.
+
+🧪 Cómo Abrir el Proyecto en un Navegador
+
+Crea una carpeta llamada cafeteria-artesanal.
+
+Dentro, crea los tres archivos: index.html, style.css, y script.js.
+
+Copia y pega el contenido correspondiente en cada archivo.
+
+Haz doble clic en index.html o ábrelo con tu navegador preferido (Chrome, Firefox, Edge, etc.).
+
+✅ Resultado esperado
+
+Tendrás una página sencilla pero estética con:
+
+Un título atractivo.
+
+Descripción del menú.
+
+Estilo visual cálido.
+
+Un botón que cambia el color del fondo al hacer clic.
+
+¿Quieres que lo prepare en un archivo ZIP descargable o te gustaría agregar más funcionalidades como un formulario de contacto o un mapa?

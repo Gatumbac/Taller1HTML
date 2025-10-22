@@ -1,0 +1,74 @@
+/* Fuente base */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background-color: #f4f1ee;
+  color: #3e2f28;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  background-color: #a97458;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+}
+
+/* Contenido principal */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.intro, .menu {
+  margin-bottom: 2rem;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 0.5rem 0;
+}
+
+/* Botón */
+button#toggle-bg{
+  background-color: #a97458;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button#toggle-bg:hover{
+  background-color: #8c5e44;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  background-color: #3e2f28;
+  color: white;
+  padding: 1rem;
+}

@@ -1,0 +1,369 @@
+/*
+	En CSS tenemos varios tipos de selectores
+	1 - Selectores de etiquetas
+	
+	estructura basica
+	
+	selector {
+		propiedad: valor;
+	}
+	
+	css no distingue entre mayusculas y minusculas
+	se ve diferencia en el nombre archivo
+	
+	1. Selectores de elementos
+	Solo se requiere indicar cual es la etiqueta HTML que se desea aplicar el estilo
+	
+	body {
+		
+	}
+	h1 {
+		
+	}
+	h3 {
+		
+	}
+	h4 {
+		
+	}
+	
+	2. Selectores de clase
+	La mayoria de frameworks usan ese selector
+	Si se inicia con un . es selector de clase
+	.titulo {
+		
+	}
+
+	.cuerpo {
+		
+	}
+	
+	.ficha {
+		
+	}
+	
+	En HTML
+	<p class="cuerpo"></p>
+	
+	Debe ser el mismo nombre en HTML y CSS
+	
+	Varios HTML pueden aplicar la misma clase
+	
+	
+	3. Selector de id
+	se antepone el numeral
+	
+	#titulo {
+		
+	}
+	
+	html:
+		<p id="titulo">Texto</p>
+	
+	4. Selector combinado donde se especifica la etiqueta HTML por niveles
+	
+=================================
+Mismo estilo a varios html
+
+selector de etiqueta
+selector de clase
+1. En todos los lugares donde tengo la etiqueta p se aplique el mismo formato
+
+2. solo los p que estan dentro de body
+	
+	Se debe aplicar el diseno que necesite menos cambios
+	Se busca la optimizacion
+	Solo las etiquetas p que estan en body
+	
+
+*/
+
+/* 
+	Selector combinado
+	Aplicar estilo a etiquetas que cumplen ciertas condiciones
+	Ejemplo de las listas ordenadas y no ordenadas
+	Aplicar el estilo a solo los li de las listas ordenadas
+	Usar un selector combinado
+	
+	div h1 {
+		background: green
+	}
+	
+========================
+
+Modelo de cajas
+Box Model
+
+Definir los tamanos que ocupan los elementos
+Todo elemento HTML se representa como una caja
+Texto
+Boton
+lista
+Imagen
+
+1. content
+2. padding
+3. border
+4. margin
+
+---------
+margin -> espacio externo con otros elementos (entre cajas)
+---------
+border -> Linea que rodea el padding 
+---------
+padding -> espaciado interno entre contenido y border
+---------
+content -> contenido real
+
+Practica
+
+.caja {
+	width: 300px;
+	padding: 20px;
+	border: 5px solid black;
+	margin: 20px;
+}
+
+ancho de una pagina
+%
+px
+
+recomendacion
+no siempre hay que forzar a una sola medida
+100%
+20%
+40%
+40%
+*/
+
+/*
+
+===================
+display -> define como debe comportarse un elemento dentro de la pagina
+- da instrucciones de como debe presentarse
+
+display -> propiedad
+valor -> no son numeros o valores aleatorios. Son valores predefinidos
+
+display: block
+ocupa toda la Linea
+
+display: inline
+todo en la misma Linea (ancho y alto no aplican)
+
+display: inline-block
+lo mismo que inline ancho y alto para botones, iconos, etc
+
+- none: oculta elementos, menu
+- flex : contenedor flexible, trabaja en una dimension
+- grid: cuadriculas
+- table: simula ser una tabla
+
+
+==============================
+propiedad: box-shadow
+sombras
+
+parametros: 
+1. desplazamiento horizontal - hacia lados
+2. desplazamiento vertical - hacia abajo
+3. difuminado - expansion sombra
+4. rgba(0,0,0,0.2) color de la sombra en colores primarios y opacidad o transparencia
+
+div {
+	box-shadow: 0, 5px, 10px, rgba(0,0,0,2)
+}
+
+==========================
+propiedad position
+valor sticky
+comportamiento del elemento para que se quede siempre en la misma posicion
+
+propiedad: top, right, bottom, left
+
+.cajatexto {
+	box-shadow: 5px, 5px, 10px, rgba(0,0,0,0.5) 
+	position: sticky;
+	top: 0px
+	right: 0px
+}
+
+propiedad z index
+priorizar otras cajas
+.cajatexto {
+	box-shadow: 5px, 5px, 10px, rgba(0,0,0,0.5) 
+	position: sticky;
+	top: 0px
+	right: 0px
+	z-index: 0;
+}
+.cajatexto {
+	box-shadow: 5px, 5px, 10px, rgba(0,0,0,0.5) 
+	position: sticky;
+	top: 0px
+	right: 0px
+	
+}
+.cajatexto {
+	box-shadow: 5px, 5px, 10px, rgba(0,0,0,0.5) 
+	position: sticky;
+	top: 0px
+	right: 0px
+}
+
+z index posicionar elementos
+
+*/
+
+/*
+Reset basico
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+body { /* fuente externa */
+	font-family: 'Montserrat', sans-serif;
+	background: linear-gradient(135deg, #A7B49E, #d9e4ec 100%);
+	line-height: 1.6;
+}
+
+header {
+	background: #5C7285;
+	margin: 0;
+	padding: 15px;
+	box-shadow: 0px, 5px, 10px, rgba(0,0,0,0.2);
+	color: white;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+nav a{
+	color: white;
+	text-decoration: none;
+}
+
+nav {
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+}
+
+nav a:hover{
+	background: white;
+	color: black;
+	border-radius: 5px;
+	transform: scale(1.05);
+}
+
+.caja {
+	width: 300px;
+	padding: 15px;
+	border: 5px solid #5C7285;
+	margin: 20px;
+	display: inline-block;
+	background-color: #818C78;
+	color: white;
+	text-align: center;
+}
+
+.comportamiento {
+	display: flex;
+	margin: 10px;
+	padding: 5px;
+	justify-content: center;
+}
+
+main {
+	padding: 20px;
+}
+
+footer {
+	padding: 20px;
+	text-align: center;
+}
+
+section, section div {
+	margin-bottom: 20px;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	padding: 10px 30px;
+	margin: 10px;
+	border: none;
+	background-color: #818C78;
+	color: white;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+button:hover {
+	background: #A7B49E;
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+button.btn {
+	background-color: #5C7285;
+}
+
+h1, h2, h3 {
+	margin-bottom: 20px;
+	color: #1D242A;
+}
+
+.titulo {
+	text-align: center;
+	color: #1D242A;
+	text-transform: uppercase;
+}
+
+/* Responsive Web Design*/
+/* Puntos clave a tener en cuenta */
+/* El diseno debe ser adaptable a la pantalla, el contenido de la misma*/
+/*
+Unidades:
+% - para anchos fluidos
+em - para tipografia
+vh - altura
+vw - ancho
+
+*/
+
+/*
+Responsive Web Design
+*/
+
+@media(max-width: 768px) {
+	body {
+		background: orange;
+	}
+	
+	.caja {
+		background: gray;
+		width: 50%;
+	}
+}
+
+@media(max-width: 468px) {
+	body {
+		background: gray;
+		width: 100%;
+	}
+}

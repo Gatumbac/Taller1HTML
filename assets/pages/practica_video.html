@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- Metadatos -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="practicas html css js">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="author" content="Gatumbac">
+	<meta http-equiv="refresh" content="10">
+	
+	<!-- Titulo y Enlaces -->
+	<title>Practica Video</title>
+	<link rel="icon" href="../img/icons/Zubat.ico">
+</head>
+<body>
+	<hr>
+	<header>
+		<!-- Barra de navegacion -->
+		<nav>
+			<a href="../../index.html">Inicio</a> |
+			<a href="./practica_texto.html">Practica de Texto</a> | 
+			<a href="https://sites.google.com/fiec.espol.edu.ec/portafolio-gabriel-tumbaco?usp=sharing" target="_blank">Practica de Builder</a> | 
+			<a href="https://gatumbac0604.my.canva.site/descubreecuador" target="_blank">Practica de Canva</a> | 
+			<a href="../ia/index.html">Practica de Inteligencia Artificial</a> |
+			<a href="./practica_listas.html">Practica de Listas</a> |
+			<a href="./practica_imagenes.html">Practica de Imagenes</a> |
+			<a href="./practica_audio.html">Practica de Audio</a> |
+			<a href="../copypaste/grad-school/templatemo_557_grad_school/index.html">Practica de Video</a> |
+			<a href="./practica_tablas.html">Practica de Tablas</a> |
+			<a href="./practica_css.html">Practica de CSS</a> |
+			<a href="./practica_cp.html">Practica de Copy Paste</a> |
+			<a href="./practica_js.html">Practica de Java Script</a> |
+			<a href="./practica_controles.html">Practica de Controles</a> |
+			<a href="./practica_form.html">Practica de Formularios</a> |
+			<a href="./practica_form2.html">Practica de Formularios-2</a> |
+			<a href="./practica_mv.html">Practica de etiquetas de Menú Vertical</a> |
+			<a href="./practica_mh.html">Practica de etiquetas de Menú Horizontal</a> |
+			<a href="./practica_crazy.html">Practica Crazy</a> |
+		</nav>
+	</header>
+	<hr>
+	
+	<!-- Practica de etiquetas de video -->
+	<main>
+		<h1>Practica de Video</h1>
+		<!--Atributos de control booleanos: autoplay, loop, muted, controls, playsinline-->
+		<video width="400" src="../video/dj.mp4" autoplay loop muted controls></video>
+		<hr>
+		
+		<!--Se puede especificar mas sources como en picture para mejorar el performance dependiendo del navegador-->
+		<!--ojo al preload (none o metadata) puede mejorar el performance-->
+		<h2>Etiqueta video con sources</h2>
+		<video width="400" autoplay loop muted>
+			<source src="../video/dj.webm" type="video/webm">
+			<source src="../video/dj.ogv" type="video/ogv">
+			<source src="../video/dj.mp4" type="video/mp4">
+		</video>
+		
+		<!-- video de publicidad -->
+		
+		<h2>Video con portada</h2>
+		<video width="400" poster="../img/espol3.jpg" preload="metadata" controls loop muted>
+			<source src="../video/dj.webm" type="video/webm">
+			<source src="../video/dj.ogv" type="video/ogv">
+			<source src="../video/dj.mp4" type="video/mp4">
+		</video>
+		
+		<!-- tener cuidado con autoplay -->
+		<!-- consume recursos -->
+	</main>
+	<hr>
+	
+	<!-- Pie de Pagina -->
+	<footer>
+		<p>Desarrollado por: Gatumbac</p>
+		<a href="mailto:gatumbac@espol.edu.ec">Correo</a> |
+		<a href="tel:+5930979234716">Celular</a>
+		<p>&copy; Gabriel Tumbaco 2025</p>
+	</footer>
+</body>
+</html>

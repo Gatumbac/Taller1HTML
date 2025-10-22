@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- Metadatos -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="practicas html css js">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="author" content="Gatumbac">
+	<meta http-equiv="refresh" content="10">
+	
+	<!-- Titulo y Enlaces -->
+	<title>Practica CSS</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+	<link rel="icon" href="../img/icons/Wigglytuff.ico">
+	<!-- <link href="../css/style_reset.css" rel="stylesheet"></link> -->
+	<link href="../css/styles.css" rel="stylesheet"></link>
+	<style>
+	</style>
+</head>
+<body>
+	<header>
+		<!-- Barra de navegacion -->
+		<nav>
+			<a href="../../index.html">Inicio</a> |
+			<a href="./practica_texto.html">Practica de Texto</a> | 
+			<a href="https://sites.google.com/fiec.espol.edu.ec/portafolio-gabriel-tumbaco?usp=sharing" target="_blank">Practica de Builder</a> | 
+			<a href="https://gatumbac0604.my.canva.site/descubreecuador" target="_blank">Practica de Canva</a> | 
+			<a href="../ia/index.html">Practica de Inteligencia Artificial</a> |
+			<a href="./practica_listas.html">Practica de Listas</a> |
+			<a href="./practica_imagenes.html">Practica de Imagenes</a> |
+			<a href="./practica_audio.html">Practica de Audio</a> |
+			<a href="./practica_video.html">Practica de Video</a> |
+			<a href="./practica_tablas.html">Practica de Tablas</a> |
+			<a href="./practica_css.html">Practica de CSS</a> |
+			<a href="../copypaste/grad-school/templatemo_557_grad_school/index.html">Practica de Copy Paste</a> |
+			<a href="./practica_js.html">Practica de Java Script</a> |
+			<a href="./practica_controles.html">Practica de Controles</a> |
+			<a href="./practica_form.html">Practica de Formularios</a> |
+			<a href="./practica_form2.html">Practica de Formularios-2</a> |
+			<a href="./practica_mv.html">Practica de etiquetas de Menú Vertical</a> |
+			<a href="./practica_mh.html">Practica de etiquetas de Menú Horizontal</a> |
+			<a href="./practica_crazy.html">Practica Crazy</a> |
+		</nav>
+	</header>
+	<hr>
+	
+	<!-- Practica de etiquetas de CSS -->
+	<main>
+		<h1 class="titulo">Practica de CSS</h1>
+		<div class="comportamiento">
+			<p class="caja">
+				Modelo Caja 1:<br>En linea - Codigo embebido<br>
+				p style="color:blue" Linea de estilo con codigo embebido /p
+			</p>
+		
+			<p class="caja">
+				Modelo Caja 2:<br>Codigo interno - codigo cabecera<br>
+						style h1 {color: gray;} /style
+			</p>
+			<p class="caja">
+				Modelo Caja 3:<br>Externo - Hoja de estilo<br>
+					link href="../css/styles.css" rel="stylesheet"
+			</p>
+		</div>
+		
+		<div class="comportamiento">
+			<p class="caja">
+				Modelo Caja 1:<br>Todo elemento html que se presenta en pantalla se debe tratar como una caja.
+			</p>
+			
+			<p class="caja">
+				Modelo Caja 2:<br>Todo elemento html que se presenta en pantalla se debe tratar como una caja.
+			</p>
+		
+			<p class="caja">
+				Modelo Caja 3:<br>Todo elemento html que se presenta en pantalla se debe tratar como una caja.
+			</p>
+
+		</div>
+	
+		<!-- Se deben aplicar los selectores -->
+		<!-- Codigo debe ir en el head -->
+		
+		<section>
+			<article>
+				<h2>
+					Notas:
+				</h2>
+				<p>
+					1. Siempre se ejecuta de arriba hacia abajo, presentara el ultimo efecto programado
+				</p>
+				<p>
+					2. Tener cuidado con montar las etiquetas en el diseno
+				</p>
+			</article>
+		</section>
+		
+		<section>
+			<h2>Hipervinculos</h2>
+			<div>
+				<h4>Hipervinculos abrir en una nueva pestana</h4>
+				<p>Para crear un hipervínculo que se abra en una nueva pestaña, debes agregar el atributo target="_blank" dentro de la etiqueta a. Esto hace que el contenido enlazado se abra en una nueva pestaña del navegador en lugar de reemplazar la página actual. </p>
+				<a href="https://www.espol.edu.ec/es" target="_blank">Abrir en una nueva pestana</a>
+			</div>
+			
+			<div>
+				<h4>Hipervinculos abrir en la misma pestana</h4>
+				<p>Para que un hipervínculo se abra en la misma pestaña en HTML, utiliza el atributo target="_self" dentro de la etiqueta a. Este es el valor predeterminado, por lo que en muchos casos no es necesario especificarlo, ya que el navegador abrirá el enlace en la misma pestaña por defecto. </p>
+				<a href="https://www.espol.edu.ec/es" target="_self">Abrir en la misma pestana</a>
+				
+			</div>
+			
+			<div>
+				<h4>Hipervinculos abrir en una ventana segura</h4>
+				<p>Para que los hipervínculos se abran en una nueva pestaña de forma segura, usa target="_blank" y agrega rel="noopener noreferrer" a la etiqueta <a> en HTML. El atributo target="_blank" indica que el enlace se abrirá en una nueva pestaña o ventana, mientras que rel="noopener noreferrer" es una medida de seguridad crucial para prevenir ataques como el "tabnabbing". </p>
+				<a href="https://www.espol.edu.ec/es" target="_blank" rel="noopener noreferrer">Abrir en una nueva pestana</a>
+				
+			</div>
+			
+		</section>
+		
+		<section>
+		<h2>Botones con estilo</h2>
+		<p>Evento hover</p>
+		<button>Boton 1</button>
+		<button>Boton 2</button>
+		<button class="btn">Boton 3</button>
+		</section>
+	</main>
+	<hr>
+	
+	<!-- Pie de Pagina -->
+	<footer>
+		<p>Desarrollado por: Gatumbac</p>
+		<a href="mailto:gatumbac@espol.edu.ec">Correo</a> |
+		<a href="tel:+5930979234716">Celular</a>
+		<p>&copy; Gabriel Tumbaco 2025</p>
+	</footer>
+</body>
+</html>
