@@ -1,5 +1,1 @@
-const button = document.getElementById("button");
-
-button.addEventListener("click", () => {
-	alert("Hola mundo");
-});
+alert("Este es mi mensaje alert desde un archivo externo");

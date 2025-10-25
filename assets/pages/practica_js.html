@@ -7,11 +7,14 @@
 	<meta name="description" content="practicas html css js">
 	<meta name="keywords" content="HTML, CSS, JavaScript">
 	<meta name="author" content="Gatumbac">
-	<meta http-equiv="refresh" content="10">
 	
 	<!-- Titulo y Enlaces -->
 	<title>Practica JavaScript</title>
 	<link rel="icon" href="../img/icons/Weedle.ico">
+	<!-- Java Script puede ejecutarse tanto en un documento HTML y desde un file externo -->
+	<!-- Antes del body, dentro, fuera, externo -->
+	<!--Es considerado mala practica llamar al js antes del body-->
+	
 </head>
 <body>
 	<hr>
@@ -44,7 +47,175 @@
 	<!-- Practica de etiquetas de JS -->
 	<main>
 		<h1>Practica de JavaScript</h1>
-
+		<hr>
+		<section>
+			<p>
+				Java Script es un lenguaje de programacion que se ejecuta tanto en el frontend como en el backend
+			</p>
+			<p>
+				Java Script lo usamos en varios frameworks
+			</p>
+			<ol>
+				<li>React</li>
+				<li>Vue.js</li>
+				<li>Angular</li>
+				<li>Svelte</li>
+				<li>Next.js</li>
+				<li>Nest.js</li>
+				<li>Astro</li>
+			</ol>
+		</section>
+		<section>
+			<hr>
+			<h3>Conocimiento previos</h3>
+			<p>
+				Para programar en Java Script se hara uso de los conocimientos de programacion adquiridos durante la carrera
+			</p>
+			<p>Variables: <i>Locales, Globales, Estaticas, Constantes</i></p>
+			<p>Estructuras de control: <i>If, Else, Switch</i></p>
+			<p>Bucles: <i>For, While</i></p>
+			<p>Funciones: <i>Definicion y scope</i></p>
+		</section>
+		<hr>
+		<section>
+			<h3>Tipos de variables</h3>
+			<ul>
+				<li><strong>let:</strong> Locales - Dentro de una funcion o bloque de programacion</li>
+				<li><strong>var:</strong> Globales - Las podemos utilizar en cualquier parte del desarrollo</li>
+				<li><strong>const:</strong> Valores fijos - No pueden cambiar su valor durante la ejecucion</li>
+			</ul>
+		</section>
+		<hr>
+		<section>
+			<h3>Tipos de datos</h3>
+			<ul>
+				<li><strong>String:</strong> Caracteres alfanumericos</li>
+				<li><strong>Number:</strong> Valores numericos</li>
+				<li><strong>Booleano:</strong> True/False</li>
+				<li><strong>Arrays:</strong> Listas []</li>
+				<li><strong>Object:</strong> Diccionarios {}</li>
+				<li><strong>Null:</strong> Valores Nulos</li>
+			</ul>
+		</section>
+		<hr>
+		<section>
+			<h3>Programacion en JavaScript</h3>
+			<ul>
+				<li><strong>Condiciones: </strong>if - else</li>
+				<li><strong>Estructuras: </strong>Switch</li>
+				<li><strong>Ciclos / Bucles: </strong>For, While, Do-While</li>
+				<li><strong>for...of: </strong>para recorrer colecciones (arrays)</li>
+				<li><strong>for...in: </strong>para recorrer objetos (keys)</li>
+			</ul>
+		</section>
+		<hr>
+		<section>
+			<h3>Momento donde se ejecuta Java Script</h3>
+			<ol>
+				<li><strong>Script dentro de HTML</strong>: Embebido en medio del HTML</li>
+				<li><strong>Script dentro de un control</strong>: Uso de los atributos de elementos HTML</li>
+				<li><strong>Script al final - Antes de cerrar el body</strong>: Script embebido antes de cerrar el body (inline script late)</li>
+				<li><strong>Archivo externo (.js)</strong>: Script externo vinculado al HTML (External script)</li>
+			</ol>
+		</section>		
+		<hr>
+		<section>
+			<h3>Prueba de ejecucion de cada momento</h3>
+			<ol>
+				<li><strong></strong>: </li>
+				<li><strong></strong>: </li>
+				<li><strong></strong>: </li>
+				<li><strong></strong>: </li>
+			</ol>
+		</section>	
+		<hr>
+		<section>
+			<h3>Metodos Relacionados</h3>
+			<ol>
+				<li><strong></strong>: </li>
+				<li><strong></strong>: </li>
+				<li><strong></strong>: </li>
+				<li><strong></strong>: </li>
+			</ol>
+		</section>		
+		<hr>
+		<!--Tarea: Realice la investigacion y complete la teoria-->
+		<section>
+			<h3>Eventos Programables JS dentro de una pagina web</h3>
+			<p>Desarrolle un ejemplo para cada evento</p>
+			<ol>
+				<li>
+					<strong>DOM Content Loading</strong>: 
+					<p>
+						Definicion: Se dispara cuando el documento HTML inicial se ha cargado y analizado por completo, sin esperar a que terminen de cargarse hojas de estilo, imágenes y sub-frames. Ejemplo: Ejecutar un script para manipular elementos de la página tan pronto como la estructura HTML esté lista, sin esperar a las imágenes.
+					</p>
+				</li>
+				<li>
+					<strong>Load</strong>: 
+					<p>
+						Definicion: Se dispara cuando la página completa (incluyendo todos los recursos dependientes como hojas de estilo, scripts, imágenes e iframes) se ha cargado totalmente. Ejemplo: Ocultar un ícono de "cargando" (spinner) solo después de que toda la página, incluidas las imágenes pesadas, se haya cargado.
+					</p>
+				</li>
+				<li>
+					<strong>Unload</strong>: 
+					<p>
+						Definicion: (Obsoleto) Se dispara cuando el documento está a punto de descargarse (cerrar pestaña, navegar a otra página). Reemplazado en su mayoría por `beforeunload` y `pagehide`. Ejemplo: Intentar enviar un último dato de analítica justo antes de que el usuario abandone la página.
+					</p>
+				</li>
+				<li>
+					<strong>BeforeUnload</strong>: 
+					<p>
+						Definicion: Se dispara justo antes de que el usuario esté a punto de abandonar la página. Se usa comúnmente para advertir sobre cambios no guardados. Ejemplo: Mostrar el mensaje "¿Estás seguro de que quieres salir? Tienes cambios sin guardar" al intentar cerrar la pestaña de un editor.
+					</p>
+				</li>
+				<li>
+					<strong>VisibilityChange</strong>: 
+					<p>
+						Definicion: Se dispara cuando el contenido de una pestaña se vuelve visible u oculto (el usuario cambia de pestaña o minimiza la ventana). Ejemplo: Pausar un video automáticamente cuando el usuario cambia a otra pestaña del navegador y reanudarlo cuando vuelve.
+					</p>
+				</li>
+				<li>
+					<strong>ReadyStateChange</strong>: 
+					<p>
+						Definicion: Se dispara cuando cambia la propiedad `readyState` del documento, indicando el estado de carga (ej. 'loading', 'interactive', 'complete'). Ejemplo: Monitorear el progreso de carga; es una forma más detallada de saber si la página ya es 'interactiva' (similar a DOMContentLoaded) o 'completa' (similar a load).
+					</p>
+				</li>
+				<li>
+					<strong>FullScreenChange - FullScreenError</strong>: 
+					<p>
+						Definicion: `fullscreenchange` se dispara cuando el navegador entra o sale del modo de pantalla completa. `fullscreenerror` se dispara si falla el intento de entrar en dicho modo. Ejemplo: Cambiar el ícono de un botón de "Pantalla Completa" a "Salir de Pantalla Completa" en un reproductor de video.
+					</p>
+				</li>
+				<li>
+					<strong>Copy, Cut, Paste</strong>: 
+					<p>
+						Definicion: Se disparan cuando el usuario realiza la acción correspondiente (copiar, cortar o pegar) en la página, generalmente sobre un texto seleccionado o un campo de entrada. Ejemplo: Registrar cuándo un usuario copia un código de cupón, o impedir que se pegue contenido en un campo de "confirmar contraseña".
+					</p>
+				</li>
+				<li>
+					<strong>SelectionChange</strong>: 
+					<p>
+						Definicion: Se dispara cada vez que cambia la selección de texto actual en el documento. Ejemplo: Mostrar un pequeño menú emergente (tooltip) con opciones como "Buscar" tan pronto como el usuario termina de seleccionar un texto.
+					</p>
+				</li>
+				<li>
+					<strong>Scroll</strong>: 
+					<p>
+						Definicion: Se dispara cuando se desplaza (hace scroll) la vista del documento o un elemento específico. Ejemplo: Hacer que la barra de navegación se vuelva "fija" en la parte superior después de que el usuario se haya desplazado 100 píxeles hacia abajo.
+					</p>
+				</li>
+			</ol>
+		</section>
+		
+		<section>
+			<h3></h3>
+			<ol>
+				<li><strong></strong>: </li>
+				<li><strong></strong>: </li>
+				<li><strong></strong>: </li>
+				<li><strong></strong>: </li>
+			</ol>
+		</section>
 	</main>
 	<hr>
 	
@@ -55,5 +226,16 @@
 		<a href="tel:+5930979234716">Celular</a>
 		<p>&copy; Gabriel Tumbaco 2025</p>
 	</footer>
+	
+	<!--
+	<script>
+		alert("Este es mi primer mensaje de alert interno - Al final del Body")
+	</script>
+	
+	<script>
+		alert("Este es mi segundo mensaje de alert interno - Antes del Body")
+	</script>
+	-->
+	<script src="../js/script.js"></script>
 </body>
 </html>
