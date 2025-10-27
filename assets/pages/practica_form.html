@@ -7,11 +7,11 @@
 	<meta name="description" content="practicas html css js">
 	<meta name="keywords" content="HTML, CSS, JavaScript">
 	<meta name="author" content="Gatumbac">
-	<meta http-equiv="refresh" content="10">
 	
 	<!-- Titulo y Enlaces -->
 	<title>Practica Form</title>
 	<link rel="icon" href="../img/icons/Vulpix.ico">
+	<link rel="stylesheet" href="../css/form.css">
 </head>
 <body>
 	<hr>
@@ -44,6 +44,31 @@
 	<!-- Practica de etiquetas de form-->
 	<main>
 		<h1>Practica de Form</h1>
+		<form method="GET">
+			<fieldset>
+				<legend>Registro de usuario</legend>
+				
+				<label for="name">Nombres</label>
+				<input type="text" name="name" id="name" placeholder="Ingresa tu nombre" required>
+				
+				<hr>
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" placeholder="example@example.com" required>
+
+				<hr>
+				<label for="country">Pais</label>
+				<select id="country" name="country" required>
+					<option selected disabled value="">-- Seleccione una opcion --</option>
+					<option value="Ecuador">Ecuador</option>
+					<option value="Colombia">Colombia</option>
+					<option value="Peru">Peru</option>
+				</select>
+				
+				<hr>
+				<input type="submit" value="Enviar">						
+				
+			</fieldset>
+		</form>
 
 	</main>
 	<hr>
@@ -55,5 +80,7 @@
 		<a href="tel:+5930979234716">Celular</a>
 		<p>&copy; Gabriel Tumbaco 2025</p>
 	</footer>
+	
+	<script src="../js/form1.js"></script>
 </body>
 </html>
