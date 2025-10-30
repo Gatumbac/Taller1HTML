@@ -122,7 +122,16 @@
 		<section>
 			<h3>Prueba de ejecucion de cada momento</h3>
 			<ol>
-				<li><strong></strong>: </li>
+				<li><strong>Script dentro de HTML - Inline Script Early</strong>: 
+					<script>
+						document.write("Mi primer mensaje generado con document.write - Dentro del body")
+					</script>
+				</li>				
+				<li><strong>Script dentro de un control - Inline Events Handlers</strong>: 
+					<script>
+						document.write("Mi primer mensaje generado con document.write - Dentro del body")
+					</script>
+				</li>
 				<li><strong></strong>: </li>
 				<li><strong></strong>: </li>
 				<li><strong></strong>: </li>
@@ -231,11 +240,13 @@
 	<script>
 		alert("Este es mi primer mensaje de alert interno - Al final del Body")
 	</script>
-	
-	<script>
-		alert("Este es mi segundo mensaje de alert interno - Antes del Body")
-	</script>
 	-->
-	<script src="../js/script.js"></script>
+	<script>
+		alert("Este es mi segundo mensaje de alert interno - Al final del body del Body")
+		document.write("Mi segundo mensaje generado con document.write - Dentro del body")
+		
+	</script>
+	
+	<script src="../js/script.js" defer></script>
 </body>
 </html>

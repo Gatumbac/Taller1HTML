@@ -7,11 +7,11 @@
 	<meta name="description" content="practicas html css js">
 	<meta name="keywords" content="HTML, CSS, JavaScript">
 	<meta name="author" content="Gatumbac">
-	<meta http-equiv="refresh" content="10">
 	
 	<!-- Titulo y Enlaces -->
 	<title>Practica Form2</title>
 	<link rel="icon" href="../img/icons/Vulpix.ico">
+	<link rel="stylesheet" href="../css/form2.css">
 </head>
 <body>
 	<hr>
@@ -43,8 +43,64 @@
 	
 	<!-- Practica de etiquetas de form2-->
 	<main>
-		<h1>Practica de Form2</h1>
+		<!--<h1>Practica de Form2</h1>-->
+		<!--Formulario debe retornar los valores de cada elemento al momento del submit, llamo a la funcion FncDatosUser-->
+		<form id="frmDatos" name="frmDatos" method="GET" onSubmit="return FncDatosUser()">
+			<fieldset>
+				<legend>Datos del Usuario</legend>
 
+				<div class="form_group">
+					<label for="name">Nombre</label>
+					<input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>						
+				</div>
+
+				<div class="form_group">
+					<label for="lastname">Apellido</label>
+					<input type="text" id="lastname" name="lastName" placeholder="Ingresa tu apellido" required>
+				</div>
+
+				<div class="form_group">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" placeholder="Ingresa tu email" required>
+				</div>
+
+				<div class="form_group">
+					<label for="country">Pais</label>
+					<select name="country" id="country" required>
+						<option selected disabled value="">-- Selecciona tu pais --</option>
+						<option value="EC">Ecuador</option>
+						<option value="PE">Peru</option>
+						<option value="CO">Colombia</option>
+						<option value="AR">Argentina</option>
+						<option value="CL">Chile</option>
+					</select>
+				</div>
+
+				<div class="form_group">
+					<label for="message">Mensaje</label>
+					<textarea placeholder="Ingresa tu mensaje" name="message" id="message" required></textarea>
+				</div>
+
+				<fieldset class="form_group">
+					<legend>Genero</legend>
+					<div class="form_group">
+						<label for="male">Masculino</label>
+						<input id="male" type="radio" name="genre" required value="M">
+					</div>
+					<div class="form_group">
+						<label for="female">Femenino</label>
+						<input id="female" type="radio" name="genre" value="F">
+					</div>
+				</fieldset>
+
+				<div class="form_group">
+					<input type="checkbox" id="check_term" name="check_term" value="1" required>
+					<label for="check_term">Terminos y condiciones</label>
+				</div>
+
+				<input type="submit" value="Registrarme" class="form__button">
+			</fieldset>
+		</form>
 	</main>
 	<hr>
 	
@@ -55,5 +111,7 @@
 		<a href="tel:+5930979234716">Celular</a>
 		<p>&copy; Gabriel Tumbaco 2025</p>
 	</footer>
+	
+	<script src="../js/form2.js" defer></script>
 </body>
 </html>
