@@ -128,23 +128,66 @@
 					</script>
 				</li>				
 				<li><strong>Script dentro de un control - Inline Events Handlers</strong>: 
-					<script>
-						document.write("Mi primer mensaje generado con document.write - Dentro del body")
-					</script>
+					<!--Debemos conocer los eventos / acciones que hace el usuario-->
+					<button onclick="alert('Script ejecutado dentro de un control - Button')" >Presione 1</button>
 				</li>
-				<li><strong></strong>: </li>
-				<li><strong></strong>: </li>
-				<li><strong></strong>: </li>
+				<li><strong>Script al final - Inline Script Late</strong>: 
+					<button id="btn2" onclick="mostrarAlert()">Presioname 2</button>
+					<!--Se recomienda no usar llamados a funcion. Trabajar con los id-->
+				</li>
+				<li><strong>Archivo externo (.js) - Script externo vinculado al html - (External script)</strong> 
+					<button id="btn3">Presioname 3</button>
+					<!--Hackear al usuario-->
+					<!--Modificar contenido por medio de eventos-->
+					<h5>Modificar el contenido del HTML desde JS</h5>
+					<p id="parrafo1">Este parrafo fue escrito en HTML, no deberia ser modificado desde el script</p>
+					<button id="btn4">Presioname 4</button>
+				</li>
 			</ol>
 		</section>	
 		<hr>
 		<section>
 			<h3>Metodos Relacionados</h3>
+			<h5>Eventos JavaScript para paginas web</h5>
+			<!--Recordar CSS - Selectores-->
 			<ol>
-				<li><strong></strong>: </li>
-				<li><strong></strong>: </li>
-				<li><strong></strong>: </li>
-				<li><strong></strong>: </li>
+				<li><strong>getElementById</strong>: 
+					Afectar a un unico elemento por su id
+					<pre>
+						document.getElementById("IdDelControl")
+					</pre>
+					<h1 id="IdTitulo"></h1>
+				</li>
+				<li><strong>getElementByClassName</strong>: 
+					Todos los elementos que tengan la misma CLASS se ven afectados por:
+					<pre>
+						document.getElementByClassName("class")
+					</pre>
+					<p class="item">Parrafo #1 con la clase item</p>
+					<p class="item">Parrafo #2 con la clase item</p>
+					<p class="item">Parrafo #3 con la clase item</p>
+				</li>
+				<li><strong>getElementByTagName</strong>: 
+					Todos los elementos que tengan la misma ETIQUETA se ven afectados por:
+					<pre>
+						document.getElementByTagName("tag")
+					</pre>
+				</li>
+				<li><strong>querySelector</strong>: 
+					El primer elemento que coincida con selector css:
+					<pre>
+						document.querySelector("selector")
+					</pre>
+				</li>
+				<li><strong>querySelectorAll</strong>: 
+					Todos los elementos que coincidan con el selector seleccionado:
+					<pre>
+						document.querySelectorAll("selector")
+					</pre>
+					<div><p>Primero</p></div>
+					<div><p>Segundo</p></div>
+					<div><p>Tercero</p></div>
+				</li>
 			</ol>
 		</section>		
 		<hr>
@@ -154,75 +197,67 @@
 			<p>Desarrolle un ejemplo para cada evento</p>
 			<ol>
 				<li>
-					<strong>DOM Content Loading</strong>: 
-					<p>
-						Definicion: Se dispara cuando el documento HTML inicial se ha cargado y analizado por completo, sin esperar a que terminen de cargarse hojas de estilo, imágenes y sub-frames. Ejemplo: Ejecutar un script para manipular elementos de la página tan pronto como la estructura HTML esté lista, sin esperar a las imágenes.
-					</p>
+					<strong>DOMContentLoaded</strong>
+					<p>Ejemplo: Mostrar un mensaje apenas el DOM esté listo.</p>
+					<div id="dom-msg"></div>
 				</li>
+
 				<li>
-					<strong>Load</strong>: 
-					<p>
-						Definicion: Se dispara cuando la página completa (incluyendo todos los recursos dependientes como hojas de estilo, scripts, imágenes e iframes) se ha cargado totalmente. Ejemplo: Ocultar un ícono de "cargando" (spinner) solo después de que toda la página, incluidas las imágenes pesadas, se haya cargado.
-					</p>
+					<strong>Load</strong>
+					<p>Ejemplo: Mostrar mensaje cuando toda la página (imágenes, etc.) esté cargada.</p>
+					<div id="load-msg"></div>
 				</li>
+
 				<li>
-					<strong>Unload</strong>: 
-					<p>
-						Definicion: (Obsoleto) Se dispara cuando el documento está a punto de descargarse (cerrar pestaña, navegar a otra página). Reemplazado en su mayoría por `beforeunload` y `pagehide`. Ejemplo: Intentar enviar un último dato de analítica justo antes de que el usuario abandone la página.
-					</p>
+					<strong>Unload</strong>
+					<p>Ejemplo: Avisar por consola cuando la página se descarga.</p>
 				</li>
+
 				<li>
-					<strong>BeforeUnload</strong>: 
-					<p>
-						Definicion: Se dispara justo antes de que el usuario esté a punto de abandonar la página. Se usa comúnmente para advertir sobre cambios no guardados. Ejemplo: Mostrar el mensaje "¿Estás seguro de que quieres salir? Tienes cambios sin guardar" al intentar cerrar la pestaña de un editor.
-					</p>
+					<strong>BeforeUnload</strong>
+					<p>Ejemplo: Preguntar al usuario antes de salir de la página.</p>
 				</li>
+
 				<li>
-					<strong>VisibilityChange</strong>: 
-					<p>
-						Definicion: Se dispara cuando el contenido de una pestaña se vuelve visible u oculto (el usuario cambia de pestaña o minimiza la ventana). Ejemplo: Pausar un video automáticamente cuando el usuario cambia a otra pestaña del navegador y reanudarlo cuando vuelve.
-					</p>
+					<strong>VisibilityChange</strong>
+					<p>Ejemplo: Pausar texto cuando la pestaña se oculte y reanudar al volver.</p>
+					<p id="visibility-text">Página visible</p>
 				</li>
+
 				<li>
-					<strong>ReadyStateChange</strong>: 
-					<p>
-						Definicion: Se dispara cuando cambia la propiedad `readyState` del documento, indicando el estado de carga (ej. 'loading', 'interactive', 'complete'). Ejemplo: Monitorear el progreso de carga; es una forma más detallada de saber si la página ya es 'interactiva' (similar a DOMContentLoaded) o 'completa' (similar a load).
-					</p>
+					<strong>ReadyStateChange</strong>
+					<p>Ejemplo: Mostrar el estado actual del documento.</p>
+					<div id="ready-state"></div>
 				</li>
+
 				<li>
-					<strong>FullScreenChange - FullScreenError</strong>: 
-					<p>
-						Definicion: `fullscreenchange` se dispara cuando el navegador entra o sale del modo de pantalla completa. `fullscreenerror` se dispara si falla el intento de entrar en dicho modo. Ejemplo: Cambiar el ícono de un botón de "Pantalla Completa" a "Salir de Pantalla Completa" en un reproductor de video.
-					</p>
+					<strong>FullScreenChange / FullScreenError</strong>
+					<p>Ejemplo: Cambiar texto al entrar o salir de pantalla completa.</p>
+					<button id="fullscreen-btn">Activar Pantalla Completa</button>
+					<p id="fullscreen-msg"></p>
 				</li>
+
 				<li>
-					<strong>Copy, Cut, Paste</strong>: 
-					<p>
-						Definicion: Se disparan cuando el usuario realiza la acción correspondiente (copiar, cortar o pegar) en la página, generalmente sobre un texto seleccionado o un campo de entrada. Ejemplo: Registrar cuándo un usuario copia un código de cupón, o impedir que se pegue contenido en un campo de "confirmar contraseña".
-					</p>
+					<strong>Copy, Cut, Paste</strong>
+					<p>Ejemplo: Detectar cuando el usuario copia, corta o pega texto.</p>
+					<textarea id="clipboard-area" placeholder="Prueba copiar, cortar o pegar aquí"></textarea>
+					<p id="clipboard-msg"></p>
 				</li>
+
 				<li>
-					<strong>SelectionChange</strong>: 
-					<p>
-						Definicion: Se dispara cada vez que cambia la selección de texto actual en el documento. Ejemplo: Mostrar un pequeño menú emergente (tooltip) con opciones como "Buscar" tan pronto como el usuario termina de seleccionar un texto.
-					</p>
+					<strong>SelectionChange</strong>
+					<p>Ejemplo: Detectar cuando el usuario selecciona texto.</p>
+					<p id="selectable-text">Selecciona una parte de este texto para ver el evento.</p>
+					<p id="selection-msg"></p>
 				</li>
+
 				<li>
-					<strong>Scroll</strong>: 
-					<p>
-						Definicion: Se dispara cuando se desplaza (hace scroll) la vista del documento o un elemento específico. Ejemplo: Hacer que la barra de navegación se vuelva "fija" en la parte superior después de que el usuario se haya desplazado 100 píxeles hacia abajo.
-					</p>
+					<strong>Scroll</strong>
+					<p>Ejemplo: Cambiar color de fondo al hacer scroll.</p>
+					<div style="height: 800px; background: lightgray;" id="scroll-zone">
+						Desplázate hacia abajo para activar el evento.
+					</div>
 				</li>
-			</ol>
-		</section>
-		
-		<section>
-			<h3></h3>
-			<ol>
-				<li><strong></strong>: </li>
-				<li><strong></strong>: </li>
-				<li><strong></strong>: </li>
-				<li><strong></strong>: </li>
 			</ol>
 		</section>
 	</main>
@@ -244,9 +279,9 @@
 	<script>
 		alert("Este es mi segundo mensaje de alert interno - Al final del body del Body")
 		document.write("Mi segundo mensaje generado con document.write - Dentro del body")
-		
 	</script>
 	
 	<script src="../js/script.js" defer></script>
+	<script src="../js/eventos.js" defer></script>
 </body>
 </html>
