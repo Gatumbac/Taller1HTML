@@ -2,7 +2,25 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("HTML listo!");
     handleClickBg();
     handleTextInputListener();
+    addFormListener();
 });
+
+function addFormListener() {
+    const form = document.getElementById("formRegistro");
+    form.addEventListener("submit", (e => {
+        e.preventDefault();
+        handleData();
+    }));
+}
+
+function handleData() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const country = document.getElementById("country").value.trim();
+   
+    const lvl = `${name} - ${email} - ${country}`;
+    alert(lvl);
+}
 
 function handleTextInputListener() {
     const btn = document.getElementById('name');
